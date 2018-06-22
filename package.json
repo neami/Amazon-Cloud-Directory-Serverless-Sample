@@ -1,0 +1,36 @@
+{
+  "name": "CloudDirectory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yi Ai,",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.176.0",
+    "aws-signature-v4": "^1.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "bluebird": "^3.5.0",
+    "lodash": "^4.17.4",
+    "midware": "^0.1.7",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.8.0",
+    "json-loader": "^0.5.7",
+    "serverless-offline": "^3.15.1",
+    "serverless-webpack": "^5.1.5",
+    "uglifyjs-webpack-plugin": "^1.2.6",
+    "webpack": "^4.12.0"
+  }
+}
