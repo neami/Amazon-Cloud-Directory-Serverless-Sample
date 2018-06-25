@@ -30,16 +30,37 @@ provider:
       Action:
         - "clouddirectory:*"
       Resource:  [
-        "arn:aws:clouddirectory:ap-southeast-2:687416365397:directory/AYfB6oMkbE5ysuMaEXwNa3s/schema/user/user_1"
+        ""
       ]
 
 # The `functions` block defines what code to deploy
 functions:
   createGroup:
-    handler: handler.createGroupObject
+    handler: handler.createGroupO
     events:
       - http:
           path: create-group
+          method: get
+          cors: true
+  createPolicy:
+    handler: handler.createPolicy
+    events:
+      - http:
+          path: create-policy
+          method: get
+          cors: true
+  lookupPolicy:
+    handler: handler.lookupPolicy
+    events:
+      - http:
+          path: lookup-policy
+          method: get
+          cors: true
+  attachPolicy:
+    handler: handler.attachPolicy
+    events:
+      - http:
+          path: attach-policy
           method: get
           cors: true
   listApps:
@@ -47,5 +68,33 @@ functions:
     events:
       - http:
           path: list-apps
+          method: get
+          cors: true
+  listPolicyAttachments:
+    handler: handler.listPolicyAttachments
+    events:
+      - http:
+          path: list-policy-attach
+          method: get
+          cors: true
+  createIndex:
+    handler: handler.createIndex
+    events:
+      - http:
+          path: create-index
+          method: get
+          cors: true
+  attachToIndex:
+    handler: handler.attachToIndex
+    events:
+      - http:
+          path: attach-index
+          method: get
+          cors: true
+  listIndex:
+    handler: handler.listIndex
+    events:
+      - http:
+          path: list-index
           method: get
           cors: true
